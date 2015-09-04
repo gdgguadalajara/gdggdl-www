@@ -1,0 +1,61 @@
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+.gdg-guadalajara
+{
+  background-color: #fff;
+  background-image: url(../media/GDG-Logo.png);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+  margin-left: auto;
+  margin-right: auto;
+
+  footer
+  {
+    background: transparent;
+  }
+
+  .mdl-mega-footer__social-btn
+  {
+    background: transparent;
+  }
+
+  .mdl-mega-footer ul
+  {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+  }
+
+  a.social-btn
+  {
+    display: block;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+  }
+
+  .social-btn__github {
+    background-image: url('../media/github_white_24.svg');
+    width: 22px;
+    height: 22px;
+  }
+
+  .social-btn__gplus {
+    background-image: url('../media/g+icon_grey.png');
+    width: 22px;
+    height: 22px;
+  }
+
+}

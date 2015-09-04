@@ -1,0 +1,20 @@
+{
+  "name": "gdggdl-www",
+  "version": "1.0.0",
+  "authors": [
+    "Nazareth Gutierrez <jesusnazarethgh@gmail.com>"
+  ],
+  "description": "Sitio web del GDG Guadalajara",
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "GDG",
+    "Guadalajara"
+  ],
+  "license": "MIT",
+  "homepage": "http://gdgguadalajara.org",
+  "devDependencies": {
+    "material-design-lite": "~1.0.4"
+  }
+}
