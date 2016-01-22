@@ -8,6 +8,7 @@ Requieres de las siguientes herramientas:
   - [ npm ] - El gestor de paquetes de node (https://www.npmjs.com/)
   - [ Bower ] - Gestor de paquetes para la web (http://bower.io/)
   - [ Gulp ] - Un build task muy facil de usar y poderoso (http://gulpjs.com/)
+  - [ Composer ] - Gestor de dependencias para PHP (https://getcomposer.org/)
 
 #### Instalación
 Clona el repositorio para que puedas trabajar localmente:
@@ -17,13 +18,14 @@ $ git clone https://github.com/gdgguadalajara/gdggdl-www.git
 
 Instala las dependencias:
 ```sh
+$ cd gdggdl-www
 $ npm install
 $ bower install
+$ composer install
 ```
 
 Por último, compila:
 ```sh
-$ cd gdggdl-www
 $ gulp
 ```
 

@@ -1,14 +1,4 @@
-body {
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column;
-}
-
-main {
-  flex: 1 0 auto;
-}
-
-.gdg-guadalajara
+.gdg-guadalajara.landing
 {
   background-color: #fff;
   background-image: url(../media/GDG-Logo.png);
@@ -18,9 +8,18 @@ main {
   margin-left: auto;
   margin-right: auto;
 
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+
+  main {
+    flex: 1 0 auto;
+  }
+
   footer
   {
     background: transparent;
+    position:relative;
   }
 
   .mdl-mega-footer__social-btn
@@ -57,5 +56,4 @@ main {
     width: 22px;
     height: 22px;
   }
-
 }
