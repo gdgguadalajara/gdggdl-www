@@ -9259,29 +9259,87 @@ _:-ms-input-placeholder, :root .mdl-slider.mdl-slider.is-upgraded {
 
 .gdg-guadalajara.landing {
   background-color: #fff;
-  background-image: url(../media/GDG-Logo.png);
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center center;
-  margin-left: auto;
-  margin-right: auto;
   display: flex;
   min-height: 100vh;
   flex-direction: column; }
+  .gdg-guadalajara.landing .mdl-layout__drawer-button {
+    background: transparent;
+    color: #767777; }
+  .gdg-guadalajara.landing .mdl-layout__drawer .mdl-layout-title {
+    position: relative;
+    background: #fafafa;
+    height: 240px;
+    background-image: url(../media/GDG-Guadalajara-Square.png);
+    background-repeat: no-repeat;
+    background-size: 220px 220px;
+    background-position: center center; }
+  .gdg-guadalajara.landing .gdggdl-drawer-separator {
+    height: 1px;
+    background-color: #dcdcdc;
+    margin: 8px 0; }
+  .gdg-guadalajara.landing span.mdl-navigation__link.mdl-navigation__link {
+    color: #8bc34a;
+    padding-top: 8px;
+    padding-bottom: 8px; }
   .gdg-guadalajara.landing main {
-    flex: 1 0 auto; }
+    flex: 1 0 auto;
+    padding: 8px; }
+  .gdg-guadalajara.landing section h3 {
+    color: #767777;
+    text-transform: uppercase;
+    font-size: 20px;
+    margin: 0; }
+  .gdg-guadalajara.landing section.welcome {
+    position: relative;
+    height: 350px;
+    max-width: 400px;
+    width: auto;
+    background-color: #fff;
+    background-image: url(../media/GDG-Logo.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    margin-left: auto;
+    margin-right: auto; }
+  @media screen and (max-width: 500px) {
+    .gdg-guadalajara.landing
+section.welcome {
+      height: 250px; } }
+  .gdg-guadalajara.landing section.events {
+    max-width: 860px;
+    margin: 0 auto; }
+  .gdg-guadalajara.landing .gdg-guadalajara--event {
+    width: 100%;
+    margin-bottom: 20px; }
+    .gdg-guadalajara.landing .gdg-guadalajara--event header {
+      padding: 8px; }
+    .gdg-guadalajara.landing .gdg-guadalajara--event .mdl-card__supporting-text h4 {
+      margin-top: 0; }
+    .gdg-guadalajara.landing .gdg-guadalajara--event .mdl-card__actions {
+      display: flex;
+      box-sizing: border-box;
+      align-items: center; }
+    .gdg-guadalajara.landing .gdg-guadalajara--event .gdg-guadalajara--event-image {
+      overflow: hidden; }
+    .gdg-guadalajara.landing .gdg-guadalajara--event .gdg-guadalajara--event-image > img {
+      width: 100%;
+      vertical-align: middle; }
   .gdg-guadalajara.landing
 footer {
     background: transparent;
     position: relative; }
   .gdg-guadalajara.landing
 .mdl-mega-footer__social-btn {
-    background: transparent; }
+    background: transparent;
+    width: 24px;
+    height: 24px;
+    margin-right: 10px; }
   .gdg-guadalajara.landing
 .mdl-mega-footer ul {
     display: flex;
     flex-direction: row;
-    list-style-type: none; }
+    list-style-type: none;
+    padding: 0; }
   .gdg-guadalajara.landing
 a.social-btn {
     display: block;

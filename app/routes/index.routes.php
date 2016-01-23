@@ -7,5 +7,7 @@
  */
 
 $app->get('/', function() use ($app) {
-  $app->render('index.html');
+    $app->render('index.html', [
+        'events' => \GDGGuadalajara\Model\Event::all()
+    ]);
 });

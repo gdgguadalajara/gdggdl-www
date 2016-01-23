@@ -67,12 +67,13 @@ CREATE TABLE IF NOT EXISTS `events` (
   `id_event` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(255) NOT NULL,
   `brief_description` varchar(255) NOT NULL,
-  `full_description` text NOT NULL,
+  `content` text NOT NULL,
+  `slug` varchar(255) NOT NULL,
   `location` varchar(255) NOT NULL,
   `image_url` varchar(255) NOT NULL,
   `url` varchar(255) NOT NULL,
-  `start_date` date NOT NULL,
-  `end_date` date NOT NULL,
+  `start_date` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `end_date` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   `recurrences` int(2) DEFAULT NULL,
   `recurrence_type` enum('daily', 'weekly', 'biweekly', 'every_four_weeks') DEFAULT NULL,
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
@@ -127,4 +128,5 @@ ALTER TABLE `posts_tags`
 ALTER TABLE `logins`
   ADD CONSTRAINT `fk_logins_id_user` FOREIGN KEY (`id_user`) REFERENCES `users` (`id_user`) ON DELETE NO ACTION;
 
-
+ALTER TABLE `events`
+  ADD CONSTRAINT `uc_events_slug` UNIQUE (`slug`);

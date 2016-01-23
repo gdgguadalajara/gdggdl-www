@@ -1,1 +1,66 @@
 {% extends "base.html" %}
+
+{% block body %}
+<body class="gdg-guadalajara landing">
+
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+
+        <header class="gdggdl-header mdl-layout__header mdl-layout__header--transparent mdl-layout__header--scroll">
+            <div class="mdl-layout__header-row">
+                <!-- Title -->
+                <span class="gdggdl-title mdl-layout-title">&nbsp;</span>
+                <!-- Add spacer, to align navigation to the right -->
+                <div class="mdl-layout-spacer"></div>
+                <!-- Navigation -->
+                <nav class="mdl-navigation"></nav>
+            </div>
+        </header>
+        <div class="mdl-layout__drawer">
+            <span class="mdl-layout-title"></span>
+            <nav class="mdl-navigation">
+                <a class="mdl-navigation__link" href="https://developers.google.com/groups/">Acerca de GDG</a>
+                <a class="mdl-navigation__link" href="https://developers.google.com/groups/chapter/116137241171711738327/">Calendario</a>
+                <a class="mdl-navigation__link" href="mailto:contacto@gdgguadalajara.org">Contacto</a>
+                <div class="gdggdl-drawer-separator">&nbsp;</div>
+                <span class="mdl-navigation__link">Developers</span>
+                <a class="mdl-navigation__link" href="https://github.com/gdgguadalajara">Github</a>
+            </nav>
+        </div>
+        <main class="mdl-layout__content">
+            <section class="welcome"></section>
+
+            <section class="events">
+                <h3>Próximos eventos</h3>
+
+                {% for event in events %}
+                <div class="gdg-guadalajara--event mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+                    <header class="gdg-guadalajara--event-image mdl-cell mdl-cell--3-col-desktop mdl-cell--2-col-tablet mdl-cell--4-col-phone mdl-color--white-100 mdl-color-text--white">
+                        <img src="{{ event.image_url }}" alt="{{ event.name }}">
+                    </header>
+                    <div class="mdl-card mdl-cell mdl-cell--9-col-desktop mdl-cell--6-col-tablet mdl-cell--4-col-phone">
+                        <div class="mdl-card__supporting-text">
+                            <h4>{{ event.name }}</h4>
+                            {{ event.brief_description }}
+                        </div>
+                        <div class="mdl-card__actions mdl-card--border">
+                            <a href="{{ url_for('event-detail', {'event':event.slug}) }}" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Mas detalles</a>
+                            <div class="mdl-layout-spacer"></div>
+                            <span>{{ event.start_date | date("M d, Y") }} &nbsp;</span>
+                            <i class="material-icons">event</i>
+                        </div>
+                        <div class="mdl-card__menu">
+                            <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+                                <i class="material-icons">share</i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </section>
+
+            {% include 'includes/footer.html' %}
+        </main>
+
+    </div>
+</body>
+{% endblock %}

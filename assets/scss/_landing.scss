@@ -1,19 +1,108 @@
 .gdg-guadalajara.landing
 {
   background-color: #fff;
-  background-image: url(../media/GDG-Logo.png);
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center center;
-  margin-left: auto;
-  margin-right: auto;
 
   display: flex;
   min-height: 100vh;
   flex-direction: column;
 
+  .mdl-layout__drawer-button {
+    background: transparent;
+    color: #767777;
+  }
+
+  .mdl-layout__drawer .mdl-layout-title {
+    position: relative;
+    background: #fafafa;
+    height: 240px;
+    background-image: url(../media/GDG-Guadalajara-Square.png);
+    background-repeat: no-repeat;
+    background-size:220px 220px;
+    background-position:center center;
+  }
+
+  .gdggdl-drawer-separator {
+    height: 1px;
+    background-color: #dcdcdc;
+    margin: 8px 0;
+  }
+
+  span.mdl-navigation__link.mdl-navigation__link {
+    color: #8bc34a;
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+
   main {
     flex: 1 0 auto;
+    padding: 8px;
+  }
+
+  section {
+    h3 {
+      color: #767777;
+      text-transform: uppercase;
+      font-size: 20px;
+      margin: 0;
+    }
+  }
+
+  section.welcome {
+    position: relative;
+    height: 350px;
+    max-width: 400px;
+    width: auto;
+    background-color: #fff;
+    background-image: url(../media/GDG-Logo.png);
+    background-repeat: no-repeat;
+    background-size:contain;
+    background-position:center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media screen and (max-width: 500px)
+  {
+    section.welcome
+    {
+      height: 250px;
+    }
+  }
+
+  section.events {
+    max-width: 860px;
+    margin: 0 auto;
+  }
+
+  .gdg-guadalajara--event {
+    width: 100%;
+    margin-bottom: 20px;
+
+    header {
+      padding: 8px;
+    }
+
+
+    .mdl-card__supporting-text {
+      h4 {
+        margin-top:0;
+      }
+    }
+
+    .mdl-card__actions {
+      display: flex;
+      box-sizing:border-box;
+      align-items: center;
+    }
+
+    .gdg-guadalajara--event-image {
+      overflow: hidden;
+    }
+
+    .gdg-guadalajara--event-image > img {
+      width: 100%;
+      vertical-align: middle;
+    }
   }
 
   footer
@@ -25,6 +114,9 @@
   .mdl-mega-footer__social-btn
   {
     background: transparent;
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
   }
 
   .mdl-mega-footer ul
@@ -32,6 +124,7 @@
     display: flex;
     flex-direction: row;
     list-style-type: none;
+    padding:0;
   }
 
   a.social-btn
