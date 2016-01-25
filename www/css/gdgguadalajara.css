@@ -11595,7 +11595,7 @@ section.welcome {
   margin: 50px auto; }
   .gdg-guadalajara.event
 .event-container .event-header {
-    padding: 16px;
+    height: 65px;
     position: relative; }
     .gdg-guadalajara.event
 .event-container .event-header a {
@@ -11604,7 +11604,13 @@ section.welcome {
       top: 16px; }
   .gdg-guadalajara.event
 .event-container .event-image {
-    text-align: center; }
+    text-align: center;
+    padding: 16px;
+    overflow: hidden; }
+    @media screen and (max-width: 500px) {
+      .gdg-guadalajara.event
+.event-container .event-image img {
+        width: 100%; } }
   .gdg-guadalajara.event
 .event-container
 .event-content {
@@ -11618,9 +11624,17 @@ section.welcome {
         padding: 32px 16px 0 16px; } }
     .gdg-guadalajara.event
 .event-container
+.event-content h1 {
+      font-size: 40px; }
+    .gdg-guadalajara.event
+.event-container
 .event-content .event-share-buttons {
       margin: 40px auto 40px auto;
       text-align: center; }
+      .gdg-guadalajara.event
+.event-container
+.event-content .event-share-buttons a {
+        margin: 5px; }
   .gdg-guadalajara.event
 .event-container .event-location {
     width: 100%;
