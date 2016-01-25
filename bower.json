@@ -15,7 +15,8 @@
   "license": "MIT",
   "homepage": "http://gdgguadalajara.org",
   "devDependencies": {
-    "material-design-lite": "~1.0.6"
+    "material-design-lite": "~1.0.6",
+    "font-awesome": "~4.4.0"
   },
   "dependencies": {
     "showdown": "~1.2.3"
