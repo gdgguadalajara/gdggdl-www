@@ -76,9 +76,9 @@ class TwigExtensions extends \Twig_Extension {
    * @param $name string
    * @param $params array
    */
-  public function urlFor($name, $params = array())
+  public function urlFor($name, $params = array(), $absolute = false)
   {
-    return Slim::getInstance()->urlFor($name, $params);
+    return (($absolute ? $this->base(): '') . Slim::getInstance()->urlFor($name, $params));
   }
 
   /**

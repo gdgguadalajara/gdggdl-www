@@ -1,1 +1,96 @@
 {% extends "base.html" %}
+
+{% block title %}{{ event.name }}{% endblock %}
+
+{% block metas %} {{ parent() }}
+<!-- Twitter Card data -->
+<meta name="twitter:card" value="summary">
+
+<!-- Open Graph data -->
+<meta property="og:title" content="{{ event.name }}" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="{{ url_for('event-detail', {'event':event.slug}, true) }}" />
+<meta property="og:image" content="{{ event.image_url }}" />
+<meta property="og:description" content="{{ event.brief_description }}" />
+{% endblock %}
+
+{% block body %}
+<body class="gdg-guadalajara event">
+    <div class="mdl-layout mdl-js-layout">
+        <div class="event-ribbon"></div>
+        <main class="event-main mdl-layout__content">
+            <div class="gdggdl-back">
+                <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white-100 mdl-color-text--white" href="{{ url_for('main') }}" title="Atras" role="button">
+                    <i class="material-icons" role="presentation">arrow_back</i>
+                </a>
+            </div>
+
+            <div class="event-container  mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800">
+
+                <div class="event-header">
+                    <a href="{{ event.url }}" target="_blank" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+                        Registro
+                    </a>
+                </div>
+
+                <div class="event-image">
+                    <img src="{{ event.image_url }}" alt="{{ event.name }}">
+                </div>
+
+                <div class="event-content">
+
+                    <div class="h-event">
+                        <h1 class="p-name">{{ event.name }}</h1>
+                        <p>
+                            <span>
+                                <i class="material-icons" role="presentation">event</i> <time class="dt-start" datetime="{{ event.start_date | date('Y-m-d H:i') }}">{{ event.start_date | date("M d, Y H:i") }} Hrs</time>
+                                - <time class="dt-end" datetime="{{ event.end_date | date('Y-m-d H:i') }}">{{ event.end_date | date("M d, Y H:i") }} Hrs</time>
+                            </span>
+                            <span><i class="material-icons" role="presentation">place</i> {{ event.location }} &nbsp;</span>
+                        </p>
+                        <p class="p-summary">{{ event.brief_description }}</p>
+                    </div>
+
+                    <hr />
+
+                    {% markdown %} {{ event.content }} {% endmarkdown %}
+
+                    <div class="event-share-buttons">
+                        <!-- Twitter -->
+                        <a href="http://twitter.com/home?status={{ url_for('event-detail', {'event':event.slug}, true) }}" title="Share on Twitter" target="_blank" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--twitter"><i class="fa fa-twitter fa-fw"></i> Twitter</a>
+                        <!-- Facebook -->
+                        <a href="https://www.facebook.com/sharer/sharer.php?u={{ url_for('event-detail', {'event':event.slug}, true) }}" title="Share on Facebook" target="_blank" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--facebook"><i class="fa fa-facebook fa-fw"></i> Facebook</a>
+                        <!-- Google+ -->
+                        <a href="https://plus.google.com/share?url={{ url_for('event-detail', {'event':event.slug}, true) }}" title="Share on Google+" target="_blank" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--googleplus"><i class="fa fa-google-plus fa-fw"></i> Google+</a>
+                    </div>
+                </div><!--./event-content -->
+                <div id="event-map" class="event-location"></div>
+            </div><!--./event-container -->
+
+            {% include 'includes/footer.html' %}
+        </main>
+    </div>
+    <script type="text/javascript">
+        var map;
+        function initMap() {
+
+            var eventLocation = {
+                lat: {{ event.location_lat }},
+                lng: {{ event.location_lng }}
+            };
+
+            var map = new google.maps.Map(document.getElementById('event-map'), {
+                zoom: 13,
+                center: eventLocation
+            });
+
+            var marker = new google.maps.Marker({
+                position: eventLocation,
+                map: map,
+                title: '{{ event.location }}'
+            });
+        }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3?key={{ app_config('google.maps.apiKey') }}&callback=initMap"></script>
+<body>
+{% endblock %}

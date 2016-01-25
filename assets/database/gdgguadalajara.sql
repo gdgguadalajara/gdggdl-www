@@ -70,6 +70,8 @@ CREATE TABLE IF NOT EXISTS `events` (
   `content` text NOT NULL,
   `slug` varchar(255) NOT NULL,
   `location` varchar(255) NOT NULL,
+  `location_lat` DECIMAL(10, 8) NOT NULL,
+  `location_lng` DECIMAL(11, 8) NOT NULL,
   `image_url` varchar(255) NOT NULL,
   `url` varchar(255) NOT NULL,
   `start_date` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',

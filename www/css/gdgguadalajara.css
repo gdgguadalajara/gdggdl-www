@@ -9257,15 +9257,18 @@ _:-ms-input-placeholder, :root .mdl-slider.mdl-slider.is-upgraded {
     .mdl-grid--no-spacing > .mdl-cell--12-col-desktop.mdl-cell--12-col-desktop {
       width: 100%; } }
 
-.gdg-guadalajara.landing {
+.gdg-guadalajara {
   background-color: #fff;
   display: flex;
   min-height: 100vh;
-  flex-direction: column; }
-  .gdg-guadalajara.landing .mdl-layout__drawer-button {
+  flex-direction: column;
+  /**
+   * Menu
+   */ }
+  .gdg-guadalajara .mdl-layout__drawer-button {
     background: transparent;
     color: #767777; }
-  .gdg-guadalajara.landing .mdl-layout__drawer .mdl-layout-title {
+  .gdg-guadalajara .mdl-layout__drawer .mdl-layout-title {
     position: relative;
     background: #fafafa;
     height: 240px;
@@ -9273,74 +9276,34 @@ _:-ms-input-placeholder, :root .mdl-slider.mdl-slider.is-upgraded {
     background-repeat: no-repeat;
     background-size: 220px 220px;
     background-position: center center; }
-  .gdg-guadalajara.landing .gdggdl-drawer-separator {
+  .gdg-guadalajara .gdggdl-drawer-separator {
     height: 1px;
     background-color: #dcdcdc;
     margin: 8px 0; }
-  .gdg-guadalajara.landing span.mdl-navigation__link.mdl-navigation__link {
+  .gdg-guadalajara span.mdl-navigation__link.mdl-navigation__link {
     color: #8bc34a;
     padding-top: 8px;
     padding-bottom: 8px; }
-  .gdg-guadalajara.landing main {
+  .gdg-guadalajara main {
     flex: 1 0 auto;
     padding: 8px; }
-  .gdg-guadalajara.landing section h3 {
-    color: #767777;
-    text-transform: uppercase;
-    font-size: 20px;
-    margin: 0; }
-  .gdg-guadalajara.landing section.welcome {
-    position: relative;
-    height: 350px;
-    max-width: 400px;
-    width: auto;
-    background-color: #fff;
-    background-image: url(../media/GDG-Logo.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-    margin-left: auto;
-    margin-right: auto; }
-  @media screen and (max-width: 500px) {
-    .gdg-guadalajara.landing
-section.welcome {
-      height: 250px; } }
-  .gdg-guadalajara.landing section.events {
-    max-width: 860px;
-    margin: 0 auto; }
-  .gdg-guadalajara.landing .gdg-guadalajara--event {
-    width: 100%;
-    margin-bottom: 20px; }
-    .gdg-guadalajara.landing .gdg-guadalajara--event header {
-      padding: 8px; }
-    .gdg-guadalajara.landing .gdg-guadalajara--event .mdl-card__supporting-text h4 {
-      margin-top: 0; }
-    .gdg-guadalajara.landing .gdg-guadalajara--event .mdl-card__actions {
-      display: flex;
-      box-sizing: border-box;
-      align-items: center; }
-    .gdg-guadalajara.landing .gdg-guadalajara--event .gdg-guadalajara--event-image {
-      overflow: hidden; }
-    .gdg-guadalajara.landing .gdg-guadalajara--event .gdg-guadalajara--event-image > img {
-      width: 100%;
-      vertical-align: middle; }
-  .gdg-guadalajara.landing
+  .gdg-guadalajara
 footer {
     background: transparent;
     position: relative; }
-  .gdg-guadalajara.landing
+  .gdg-guadalajara
 .mdl-mega-footer__social-btn {
     background: transparent;
     width: 24px;
     height: 24px;
     margin-right: 10px; }
-  .gdg-guadalajara.landing
+  .gdg-guadalajara
 .mdl-mega-footer ul {
     display: flex;
     flex-direction: row;
     list-style-type: none;
     padding: 0; }
-  .gdg-guadalajara.landing
+  .gdg-guadalajara
 a.social-btn {
     display: block;
     background-position: center;
@@ -9349,11 +9312,297 @@ a.social-btn {
     width: 24px;
     height: 24px;
     cursor: pointer; }
-  .gdg-guadalajara.landing .social-btn__github {
+  .gdg-guadalajara .social-btn__github {
     background-image: url("../media/github_white_24.svg");
     width: 22px;
     height: 22px; }
-  .gdg-guadalajara.landing .social-btn__gplus {
+  .gdg-guadalajara .social-btn__gplus {
     background-image: url("../media/g+icon_grey.png");
     width: 22px;
     height: 22px; }
+
+.mdl-button.mdl-button--twitter {
+  color: #3f51b5; }
+
+.mdl-button.mdl-button--twitter:focus:not(:active) {
+  background-color: #00acee; }
+
+.mdl-button--raised.mdl-button--twitter {
+  background: #00acee;
+  color: white; }
+
+.mdl-button--raised.mdl-button--twitter:hover {
+  background-color: #00acee; }
+
+.mdl-button--raised.mdl-button--twitter:active {
+  background-color: #00acee; }
+
+.mdl-button--raised.mdl-button--twitter:focus:not(:active) {
+  background-color: #00acee; }
+
+.mdl-button--raised.mdl-button--twitter .mdl-ripple {
+  background: white; }
+
+.mdl-button--fab.mdl-button--twitter {
+  background: #00acee;
+  color: white; }
+
+.mdl-button--fab.mdl-button--twitter:hover {
+  background-color: #00acee; }
+
+.mdl-button--fab.mdl-button--twitter:focus:not(:active) {
+  background-color: #00acee; }
+
+.mdl-button--fab.mdl-button--twitter:active {
+  background-color: #00acee; }
+
+.mdl-button--fab.mdl-button--twitter .mdl-ripple {
+  background: white; }
+
+.mdl-button.mdl-button--facebook {
+  color: #3f51b5; }
+
+.mdl-button.mdl-button--facebook:focus:not(:active) {
+  background-color: #3b5998; }
+
+.mdl-button--raised.mdl-button--facebook {
+  background: #3b5998;
+  color: white; }
+
+.mdl-button--raised.mdl-button--facebook:hover {
+  background-color: #3b5998; }
+
+.mdl-button--raised.mdl-button--facebook:active {
+  background-color: #3b5998; }
+
+.mdl-button--raised.mdl-button--facebook:focus:not(:active) {
+  background-color: #3b5998; }
+
+.mdl-button--raised.mdl-button--facebook .mdl-ripple {
+  background: white; }
+
+.mdl-button--fab.mdl-button--facebook {
+  background: #3b5998;
+  color: white; }
+
+.mdl-button--fab.mdl-button--facebook:hover {
+  background-color: #3b5998; }
+
+.mdl-button--fab.mdl-button--facebook:focus:not(:active) {
+  background-color: #3b5998; }
+
+.mdl-button--fab.mdl-button--facebook:active {
+  background-color: #3b5998; }
+
+.mdl-button--fab.mdl-button--facebook .mdl-ripple {
+  background: white; }
+
+.mdl-button.mdl-button--googleplus {
+  color: #3f51b5; }
+
+.mdl-button.mdl-button--googleplus:focus:not(:active) {
+  background-color: #e93f2e; }
+
+.mdl-button--raised.mdl-button--googleplus {
+  background: #e93f2e;
+  color: white; }
+
+.mdl-button--raised.mdl-button--googleplus:hover {
+  background-color: #e93f2e; }
+
+.mdl-button--raised.mdl-button--googleplus:active {
+  background-color: #e93f2e; }
+
+.mdl-button--raised.mdl-button--googleplus:focus:not(:active) {
+  background-color: #e93f2e; }
+
+.mdl-button--raised.mdl-button--googleplus .mdl-ripple {
+  background: white; }
+
+.mdl-button--fab.mdl-button--googleplus {
+  background: #e93f2e;
+  color: white; }
+
+.mdl-button--fab.mdl-button--googleplus:hover {
+  background-color: #e93f2e; }
+
+.mdl-button--fab.mdl-button--googleplus:focus:not(:active) {
+  background-color: #e93f2e; }
+
+.mdl-button--fab.mdl-button--googleplus:active {
+  background-color: #e93f2e; }
+
+.mdl-button--fab.mdl-button--googleplus .mdl-ripple {
+  background: white; }
+
+.mdl-button.mdl-button--stumbleupon {
+  color: #3f51b5; }
+
+.mdl-button.mdl-button--stumbleupon:focus:not(:active) {
+  background-color: #f74425; }
+
+.mdl-button--raised.mdl-button--stumbleupon {
+  background: #f74425;
+  color: white; }
+
+.mdl-button--raised.mdl-button--stumbleupon:hover {
+  background-color: #f74425; }
+
+.mdl-button--raised.mdl-button--stumbleupon:active {
+  background-color: #f74425; }
+
+.mdl-button--raised.mdl-button--stumbleupon:focus:not(:active) {
+  background-color: #f74425; }
+
+.mdl-button--raised.mdl-button--stumbleupon .mdl-ripple {
+  background: white; }
+
+.mdl-button--fab.mdl-button--stumbleupon {
+  background: #f74425;
+  color: white; }
+
+.mdl-button--fab.mdl-button--stumbleupon:hover {
+  background-color: #f74425; }
+
+.mdl-button--fab.mdl-button--stumbleupon:focus:not(:active) {
+  background-color: #f74425; }
+
+.mdl-button--fab.mdl-button--stumbleupon:active {
+  background-color: #f74425; }
+
+.mdl-button--fab.mdl-button--stumbleupon .mdl-ripple {
+  background: white; }
+
+.mdl-button.mdl-button--linkedin {
+  color: #3f51b5; }
+
+.mdl-button.mdl-button--linkedin:focus:not(:active) {
+  background-color: #0e76a8; }
+
+.mdl-button--raised.mdl-button--linkedin {
+  background: #0e76a8;
+  color: white; }
+
+.mdl-button--raised.mdl-button--linkedin:hover {
+  background-color: #0e76a8; }
+
+.mdl-button--raised.mdl-button--linkedin:active {
+  background-color: #0e76a8; }
+
+.mdl-button--raised.mdl-button--linkedin:focus:not(:active) {
+  background-color: #0e76a8; }
+
+.mdl-button--raised.mdl-button--linkedin .mdl-ripple {
+  background: white; }
+
+.mdl-button--fab.mdl-button--linkedin {
+  background: #0e76a8;
+  color: white; }
+
+.mdl-button--fab.mdl-button--linkedin:hover {
+  background-color: #0e76a8; }
+
+.mdl-button--fab.mdl-button--linkedin:focus:not(:active) {
+  background-color: #0e76a8; }
+
+.mdl-button--fab.mdl-button--linkedin:active {
+  background-color: #0e76a8; }
+
+.mdl-button--fab.mdl-button--linkedin .mdl-ripple {
+  background: white; }
+
+.gdg-guadalajara.landing section h3 {
+  color: #767777;
+  text-transform: uppercase;
+  font-size: 20px;
+  margin: 0; }
+
+.gdg-guadalajara.landing section.welcome {
+  position: relative;
+  height: 350px;
+  max-width: 400px;
+  width: auto;
+  background-color: #fff;
+  background-image: url(../media/GDG-Logo.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  margin-left: auto;
+  margin-right: auto; }
+
+@media screen and (max-width: 500px) {
+  .gdg-guadalajara.landing
+section.welcome {
+    height: 250px; } }
+
+.gdg-guadalajara.landing section.events {
+  max-width: 860px;
+  margin: 0 auto; }
+
+.gdg-guadalajara.landing .gdg-guadalajara--event {
+  width: 100%;
+  margin-bottom: 20px; }
+  .gdg-guadalajara.landing .gdg-guadalajara--event header {
+    padding: 8px; }
+  .gdg-guadalajara.landing .gdg-guadalajara--event .mdl-card__supporting-text h4 {
+    margin-top: 0; }
+  .gdg-guadalajara.landing .gdg-guadalajara--event .mdl-card__actions {
+    display: flex;
+    box-sizing: border-box;
+    align-items: center; }
+  .gdg-guadalajara.landing .gdg-guadalajara--event .gdg-guadalajara--event-image {
+    overflow: hidden; }
+  .gdg-guadalajara.landing .gdg-guadalajara--event .gdg-guadalajara--event-image > img {
+    width: 100%;
+    vertical-align: middle; }
+
+.gdg-guadalajara.event .event-ribbon {
+  width: 100%;
+  height: 250px;
+  background-color: #443D70;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0; }
+
+.gdg-guadalajara.event .event-main {
+  margin-top: -242px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0; }
+
+.gdg-guadalajara.event
+.event-container {
+  max-width: 860px;
+  margin: 50px auto; }
+  .gdg-guadalajara.event
+.event-container .event-header {
+    padding: 16px;
+    position: relative; }
+    .gdg-guadalajara.event
+.event-container .event-header a {
+      position: absolute;
+      right: 16px;
+      top: 16px; }
+  .gdg-guadalajara.event
+.event-container .event-image {
+    text-align: center; }
+  .gdg-guadalajara.event
+.event-container
+.event-content {
+    border-radius: 2px;
+    padding: 16px 56px 0 56px;
+    margin-bottom: 80px; }
+    @media screen and (max-width: 760px) {
+      .gdg-guadalajara.event
+.event-container
+.event-content {
+        padding: 32px 16px 0 16px; } }
+    .gdg-guadalajara.event
+.event-container
+.event-content .event-share-buttons {
+      margin: 40px auto 40px auto;
+      text-align: center; }
+  .gdg-guadalajara.event
+.event-container .event-location {
+    width: 100%;
+    height: 300px; }

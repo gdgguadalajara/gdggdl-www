@@ -1,42 +1,5 @@
 .gdg-guadalajara.landing
 {
-  background-color: #fff;
-
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column;
-
-  .mdl-layout__drawer-button {
-    background: transparent;
-    color: #767777;
-  }
-
-  .mdl-layout__drawer .mdl-layout-title {
-    position: relative;
-    background: #fafafa;
-    height: 240px;
-    background-image: url(../media/GDG-Guadalajara-Square.png);
-    background-repeat: no-repeat;
-    background-size:220px 220px;
-    background-position:center center;
-  }
-
-  .gdggdl-drawer-separator {
-    height: 1px;
-    background-color: #dcdcdc;
-    margin: 8px 0;
-  }
-
-  span.mdl-navigation__link.mdl-navigation__link {
-    color: #8bc34a;
-    padding-top: 8px;
-    padding-bottom: 8px;
-  }
-
-  main {
-    flex: 1 0 auto;
-    padding: 8px;
-  }
 
   section {
     h3 {
@@ -103,50 +66,5 @@
       width: 100%;
       vertical-align: middle;
     }
-  }
-
-  footer
-  {
-    background: transparent;
-    position:relative;
-  }
-
-  .mdl-mega-footer__social-btn
-  {
-    background: transparent;
-    width: 24px;
-    height: 24px;
-    margin-right: 10px;
-  }
-
-  .mdl-mega-footer ul
-  {
-    display: flex;
-    flex-direction: row;
-    list-style-type: none;
-    padding:0;
-  }
-
-  a.social-btn
-  {
-    display: block;
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: 24px;
-    height: 24px;
-    cursor: pointer;
-  }
-
-  .social-btn__github {
-    background-image: url('../media/github_white_24.svg');
-    width: 22px;
-    height: 22px;
-  }
-
-  .social-btn__gplus {
-    background-image: url('../media/g+icon_grey.png');
-    width: 22px;
-    height: 22px;
   }
 }
